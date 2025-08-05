@@ -1,0 +1,42 @@
+<!-- 
+This is a placeholder SVG image for the Launch Operations process flow visualization.
+It should be replaced with an actual high-quality image showing optimization points and efficiency gains.
+Recommended dimensions: 1200px x 675px with 16:9 aspect ratio.
+-->
+<svg width="1200" height="675" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#F8F9FA"/>
+  
+  <!-- Process flow line -->
+  <path d="M100,337 C300,337 250,180 450,180 C650,180 600,337 800,337 C1000,337 950,500 1100,500" 
+        stroke="#0055FF" stroke-width="8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Process nodes -->
+  <circle cx="100" cy="337" r="30" fill="#FFFFFF" stroke="#0055FF" stroke-width="4"/>
+  <circle cx="450" cy="180" r="30" fill="#FFFFFF" stroke="#0055FF" stroke-width="4"/>
+  <circle cx="800" cy="337" r="30" fill="#FFFFFF" stroke="#0055FF" stroke-width="4"/>
+  <circle cx="1100" cy="500" r="30" fill="#FFFFFF" stroke="#0055FF" stroke-width="4"/>
+  
+  <!-- Node icons (simplified) -->
+  <text x="100" y="337" font-family="Arial" font-size="16" fill="#0055FF" text-anchor="middle" dominant-baseline="middle">1</text>
+  <text x="450" y="180" font-family="Arial" font-size="16" fill="#0055FF" text-anchor="middle" dominant-baseline="middle">2</text>
+  <text x="800" y="337" font-family="Arial" font-size="16" fill="#0055FF" text-anchor="middle" dominant-baseline="middle">3</text>
+  <text x="1100" y="500" font-family="Arial" font-size="16" fill="#0055FF" text-anchor="middle" dominant-baseline="middle">4</text>
+  
+  <!-- Optimization points -->
+  <circle cx="275" cy="250" r="20" fill="#FF5500" opacity="0.8"/>
+  <circle cx="625" cy="250" r="20" fill="#FF5500" opacity="0.8"/>
+  <circle cx="950" cy="425" r="20" fill="#FF5500" opacity="0.8"/>
+  
+  <!-- Labels -->
+  <text x="100" y="390" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Planning</text>
+  <text x="450" y="133" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Development</text>
+  <text x="800" y="390" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Testing</text>
+  <text x="1100" y="553" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Deployment</text>
+  
+  <text x="275" y="220" font-family="Arial" font-size="14" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">+42%</text>
+  <text x="625" y="220" font-family="Arial" font-size="14" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">+38%</text>
+  <text x="950" y="395" font-family="Arial" font-size="14" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">+55%</text>
+  
+  <text x="600" y="80" font-family="Arial" font-size="28" fill="#0055FF" text-anchor="middle" font-weight="bold">Process Optimization Flow</text>
+  <text x="600" y="120" font-family="Arial" font-size="18" fill="#555555" text-anchor="middle">Efficiency gains at key transition points</text>
+</svg>

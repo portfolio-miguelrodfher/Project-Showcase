@@ -1,0 +1,382 @@
+// Project-specific JavaScript for Chateau VDR Branding
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize GSAP animations - faster and more optimized
+  initGSAPAnimations();
+  
+  // Initialize custom cursor
+  initCustomCursor();
+  
+  // Initialize Three.js wine bottle interactive graphic
+  initThreeJSBottle();
+  
+  // Initialize smooth scrolling
+  initSmoothScrolling();
+});
+
+// Function to trigger advanced GSAP animations
+function initGSAPAnimations() {
+  // Global timeline
+  const mainTimeline = gsap.timeline({
+    defaults: {
+      ease: "power2.out",
+      duration: 0.6
+    }
+  });
+  
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+  
+  // Text reveal animations - more efficient
+  const textRevealElements = document.querySelectorAll('[data-animation="text-reveal"]');
+  textRevealElements.forEach(element => {
+    const lines = element.querySelectorAll('.line');
+    if (lines.length > 0) {
+      gsap.fromTo(lines, {
+        opacity: 0,
+        y: 30
+      }, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.08,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 85%"
+        }
+      });
+    } else {
+      gsap.fromTo(element, {
+        opacity: 0,
+        y: 20
+      }, {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 85%"
+        }
+      });
+    }
+  });
+  
+  // Fade in animations with ScrollTrigger
+  const fadeElements = document.querySelectorAll('[data-animation="fade-in"]');
+  fadeElements.forEach(element => {
+    const delay = parseFloat(element.getAttribute('data-animation-delay') || 0) * 0.5; // Reduced delay by half
+    gsap.fromTo(element, {
+      opacity: 0,
+      y: 15
+    }, {
+      opacity: 1,
+      y: 0,
+      delay: delay,
+      scrollTrigger: {
+        trigger: element,
+        start: "top 90%"
+      }
+    });
+  });
+  
+  // Image reveal animations with clipping mask
+  const imageElements = document.querySelectorAll('[data-animation="image-reveal"]');
+  imageElements.forEach(element => {
+    const delay = parseFloat(element.getAttribute('data-animation-delay') || 0) * 0.5; // Reduced delay by half
+    gsap.fromTo(element, {
+      clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"
+    }, {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      delay: delay,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: element,
+        start: "top 85%"
+      }
+    });
+  });
+  
+  // Paragraph reveal animations - sequential but faster
+  const paragraphElements = document.querySelectorAll('[data-animation="paragraph-reveal"]');
+  paragraphElements.forEach(element => {
+    const paragraphs = element.querySelectorAll('p');
+    gsap.fromTo(paragraphs, {
+      opacity: 0,
+      y: 20
+    }, {
+      opacity: 1,
+      y: 0,
+      stagger: 0.08,
+      scrollTrigger: {
+        trigger: element,
+        start: "top 90%"
+      }
+    });
+  });
+  
+  // Card reveal animations
+  const cardElements = document.querySelectorAll('[data-animation="card-reveal"]');
+  cardElements.forEach(element => {
+    const delay = parseFloat(element.getAttribute('data-animation-delay') || 0) * 0.5; // Reduced delay by half
+    gsap.fromTo(element, {
+      opacity: 0,
+      y: 20
+    }, {
+      opacity: 1,
+      y: 0,
+      delay: delay,
+      scrollTrigger: {
+        trigger: element,
+        start: "top 90%"
+      }
+    });
+  });
+}
+
+// Custom cursor functionality with GSAP for smoother tracking
+function initCustomCursor() {
+  const cursor = document.querySelector('.custom-cursor');
+  const cursorDot = document.querySelector('.cursor-dot');
+  const cursorOutline = document.querySelector('.cursor-outline');
+  
+  if (!cursor || !cursorDot || !cursorOutline) return;
+  
+  // Set initial position to avoid jumps
+  gsap.set(cursorDot, { xPercent: -50, yPercent: -50 });
+  gsap.set(cursorOutline, { xPercent: -50, yPercent: -50 });
+  
+  // Create smoother animation with GSAP
+  let xTo = gsap.quickTo(cursorDot, "x", {duration: 0.2, ease: "power3.out"}),
+      yTo = gsap.quickTo(cursorDot, "y", {duration: 0.2, ease: "power3.out"});
+  
+  let xToOutline = gsap.quickTo(cursorOutline, "x", {duration: 0.5, ease: "power2.out"}),
+      yToOutline = gsap.quickTo(cursorOutline, "y", {duration: 0.5, ease: "power2.out"});
+  
+  document.addEventListener('mousemove', e => {
+    xTo(e.clientX);
+    yTo(e.clientY);
+    xToOutline(e.clientX);
+    yToOutline(e.clientY);
+  });
+  
+  // Interactive elements hover effect
+  const interactiveElements = document.querySelectorAll('a, button, .brand-element, .guidelines-item');
+  interactiveElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      gsap.to(cursorOutline, {
+        scale: 1.5,
+        opacity: 0.5,
+        backgroundColor: 'rgba(140, 28, 19, 0.1)',
+        borderColor: 'rgba(140, 28, 19, 0.6)',
+        duration: 0.3
+      });
+    });
+    
+    el.addEventListener('mouseleave', () => {
+      gsap.to(cursorOutline, {
+        scale: 1,
+        opacity: 1,
+        backgroundColor: 'transparent',
+        borderColor: 'rgba(0, 0, 0, 0.2)',
+        duration: 0.3
+      });
+    });
+  });
+}
+
+function initThreeJSBottle() {
+  // No Three.js implementation for this project yet
+}
+function initThreeJSBottle() {
+  // Create the bottle showcase element
+  const bottleShowcase = document.createElement('div');
+  bottleShowcase.className = 'threejs-bottle-showcase';
+  bottleShowcase.innerHTML = '<div id="bottle-canvas"></div>';
+  
+  // Insert after the brand showcase
+  const brandShowcase = document.querySelector('.brand-showcase');
+  if (brandShowcase && brandShowcase.parentNode) {
+    brandShowcase.parentNode.insertBefore(bottleShowcase, brandShowcase.nextSibling);
+    
+    // Load Three.js from CDN if not present
+    if (typeof THREE === 'undefined') {
+      const threeScript = document.createElement('script');
+      threeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+      document.head.appendChild(threeScript);
+      
+      threeScript.onload = () => {
+        const orbitScript = document.createElement('script');
+        orbitScript.src = 'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js';
+        document.head.appendChild(orbitScript);
+        
+        orbitScript.onload = () => {
+          createWineBottle();
+        };
+      };
+    } else {
+      createWineBottle();
+    }
+  }
+}
+
+// Create the 3D wine bottle model
+function createWineBottle() {
+  const container = document.getElementById('bottle-canvas');
+  if (!container) return;
+  
+  // Set the container size
+  container.style.height = '400px';
+  container.style.position = 'relative';
+  container.style.overflow = 'hidden';
+  container.style.borderRadius = '8px';
+  container.style.marginBottom = '3rem';
+  
+  // Create the 3D scene
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xf9f5f0);
+  
+  // Add ambient light
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+  scene.add(ambientLight);
+  
+  // Add directional light
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
+  directionalLight.position.set(0, 10, 10);
+  scene.add(directionalLight);
+  
+  // Add point lights for dramatic effect
+  const pointLight1 = new THREE.PointLight(0xff9f80, 1, 100);
+  pointLight1.position.set(-5, 5, 5);
+  scene.add(pointLight1);
+  
+  const pointLight2 = new THREE.PointLight(0x8c1c13, 0.8, 100);
+  pointLight2.position.set(5, -5, 5);
+  scene.add(pointLight2);
+  
+  // Create a simple bottle geometry
+  const bottleGeometry = new THREE.CylinderGeometry(1.5, 1.5, 7, 32);
+  const neckGeometry = new THREE.CylinderGeometry(0.6, 1, 1.5, 32);
+  const capGeometry = new THREE.CylinderGeometry(0.7, 0.7, 0.5, 32);
+  
+  // Materials
+  const glassMaterial = new THREE.MeshPhysicalMaterial({
+    color: 0x0a0a0a,
+    transparent: true,
+    opacity: 0.9,
+    roughness: 0.1,
+    metalness: 0,
+    reflectivity: 0.9,
+    clearcoat: 1.0,
+    clearcoatRoughness: 0.1
+  });
+  
+  const labelMaterial = new THREE.MeshStandardMaterial({
+    color: 0xf5f2e9,
+    roughness: 0.8,
+    metalness: 0
+  });
+  
+  const capMaterial = new THREE.MeshStandardMaterial({
+    color: 0x8c1c13,
+    roughness: 0.5,
+    metalness: 0.3
+  });
+  
+  // Create meshes
+  const bottleMesh = new THREE.Mesh(bottleGeometry, glassMaterial);
+  scene.add(bottleMesh);
+  
+  // Position the neck
+  const neckMesh = new THREE.Mesh(neckGeometry, glassMaterial);
+  neckMesh.position.y = 4.25;
+  scene.add(neckMesh);
+  
+  // Position the cap
+  const capMesh = new THREE.Mesh(capGeometry, capMaterial);
+  capMesh.position.y = 5.25;
+  scene.add(capMesh);
+  
+  // Create a label (as a plane)
+  const labelGeometry = new THREE.PlaneGeometry(2.5, 3);
+  const labelMesh = new THREE.Mesh(labelGeometry, labelMaterial);
+  labelMesh.position.z = 1.6;
+  labelMesh.position.y = 0.5;
+  scene.add(labelMesh);
+  
+  // Create camera
+  const camera = new THREE.PerspectiveCamera(35, container.clientWidth / container.clientHeight, 0.1, 1000);
+  camera.position.set(0, 0, 15);
+  
+  // Create renderer
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  container.appendChild(renderer.domElement);
+  
+  // Create controls
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05;
+  controls.rotateSpeed = 0.5;
+  controls.enableZoom = false;
+  
+  // Add a subtle rotation animation
+  function animate() {
+    requestAnimationFrame(animate);
+    
+    bottleMesh.rotation.y += 0.003;
+    neckMesh.rotation.y += 0.003;
+    capMesh.rotation.y += 0.003;
+    labelMesh.rotation.y += 0.003;
+    
+    controls.update();
+    renderer.render(scene, camera);
+  }
+  
+  animate();
+  
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    camera.aspect = container.clientWidth / container.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.clientWidth, container.clientHeight);
+  });
+}
+
+// Function placeholder for any future smooth scrolling implementation
+function initSmoothScrolling() {
+  // Smooth scrolling implementation removed as requested
+}
+  
+  // Enlarge cursor when hovering over links and buttons
+  const interactiveElements = document.querySelectorAll('a, button, .brand-element, .guidelines-item');
+  interactiveElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+      cursorOutline.style.width = '60px';
+      cursorOutline.style.height = '60px';
+      cursorOutline.style.opacity = '0.3';
+    });
+    
+    element.addEventListener('mouseleave', () => {
+      cursorOutline.style.width = '40px';
+      cursorOutline.style.height = '40px';
+      cursorOutline.style.opacity = '0.5';
+    });
+  });
+}
+
+// Add smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 100,
+        behavior: 'smooth'
+      });
+    }
+  });
+});

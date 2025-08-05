@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Miguel Rodriguez – AI-driven product marketing portfolio" />
+  <meta property="og:title" content="Miguel Rodriguez – Product Strategist & Creative Technologist" />
+  <meta property="og:description" content="Shaping products at the intersection of AI, strategy, and storytelling." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-portfolio-url.com" />
+  <meta property="og:image" content="./assets/og-preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Miguel Rodriguez – Product Strategist & Creative Technologist" />
+  <meta name="twitter:description" content="Shaping products at the intersection of AI, strategy, and storytelling." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- GSAP Animation Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+  <title>Miguel Rodriguez – Portfolio</title>
+</head>
+<body class="dark-mode loading">
+  <!-- Navigation -->
+  <nav class="main-nav" data-scroll-sticky>
+    <div class="nav-container">
+      <a href="#" class="nav-logo" data-animation="fade-in">MRodriguez</a>
+      <div class="nav-links">
+        <a href="#projects" class="nav-link" data-animation="fade-in" data-animation-delay="0.2">Projects</a>
+        <a href="#about" class="nav-link" data-animation="fade-in" data-animation-delay="0.3">About</a>
+        <a href="#contact" class="nav-link" data-animation="fade-in" data-animation-delay="0.4">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Parallax -->
+  <header class="hero-section" data-scroll-section>
+    <div class="hero-background" data-scroll data-scroll-speed="-0.5">
+      <!-- Animated background layer -->
+      <div class="hero-backdrop"></div>
+      <div class="hero-grain"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="headline headline-wide" data-animation="text-reveal">
+          <span class="line" data-animation-delay="0.1">Shaping Products</span>
+          <span class="line" data-animation-delay="0.3">at the</span>
+          <span class="line" data-animation-delay="0.5">Intersection of AI,</span>
+          <span class="line" data-animation-delay="0.6">Strategy,</span>
+          <span class="line" data-animation-delay="0.7">and Storytelling.</span>
+        </h1>
+        <p class="subheadline" data-animation="fade-in" data-animation-delay="0.9">Product Marketing  | Creative Technology</p>
+        <div class="hero-cta" data-animation="fade-in" data-animation-delay="1.2">
+          <a href="#projects" class="btn btn-primary">VIEW PROJECTS</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" data-animation="fade-in" data-animation-delay="1.5">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Projects Section with Staggered Cards -->
+  <section id="projects" class="projects-section" data-scroll-section>
+    <div class="container">
+      <h2 class="section-title" data-animation="text-reveal">
+        <span class="line">Featured Projects</span>
+      </h2>
+      <div class="projects-grid">
+        <a href="./projects/ai-engagement-platform/index.html" class="project-card" data-animation="card-reveal" data-animation-delay="0.1">
+          <div class="card-content">
+            <div class="card-overlay"></div>
+            <h3 class="project-title">AI Engagement Platform</h3>
+            <p class="project-description">Redefining personalization through intelligent experience design.</p>
+            <div class="project-tags">
+              <span>Product Strategy</span>
+              <span>AI</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="./projects/launch-operations-optimizer/index.html" class="project-card" data-animation="card-reveal" data-animation-delay="0.2">
+          <div class="card-content">
+            <div class="card-overlay"></div>
+            <h3 class="project-title">Launch Operations Optimizer</h3>
+            <p class="project-description">AI-powered toolkit to accelerate GTM readiness.</p>
+            <div class="project-tags">
+              <span>SaaS</span>
+              <span>Operations</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="./projects/wine-discovery-experience/index.html" class="project-card" data-animation="card-reveal" data-animation-delay="0.3">
+          <div class="card-content">
+            <div class="card-overlay"></div>
+            <h3 class="project-title">Wine Discovery Experience</h3>
+            <p class="project-description">A storytelling engine for wine lovers and curious explorers.</p>
+            <div class="project-tags">
+              <span>UX Design</span>
+              <span>Storytelling</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="./projects/url-content-analyzer/index.html" class="project-card" data-animation="card-reveal" data-animation-delay="0.4">
+          <div class="card-content">
+            <div class="card-overlay"></div>
+            <h3 class="project-title">URL Content Analyzer</h3>
+            <p class="project-description">Lightweight frontend app for real-time webpage insights.</p>
+            <div class="project-tags">
+              <span>Web App</span>
+              <span>Frontend</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="./projects/chateau-vdr-branding/index.html" class="project-card" data-animation="card-reveal" data-animation-delay="0.5">
+          <div class="card-content">
+            <div class="card-overlay"></div>
+            <h3 class="project-title">Château VDR Branding</h3>
+            <p class="project-description">A fictional vineyard brand brought to life through visual identity.</p>
+            <div class="project-tags">
+              <span>Branding</span>
+              <span>Visual Design</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="./projects/mbusa-driving-excellence/index.html" class="project-card" data-animation="card-reveal" data-animation-delay="0.6">
+          <div class="card-content">
+            <div class="card-overlay"></div>
+            <h3 class="project-title">Driving Excellence</h3>
+            <p class="project-description">Strategic blueprint for Mercedes-Benz USA's electrified future.</p>
+            <div class="project-tags">
+              <span>Strategy</span>
+              <span>Visualization</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section with Image Reveal -->
+  <section id="about" class="about-section" data-scroll-section>
+    <div class="container about-layout">
+      <div class="avatar-container" data-animation="image-reveal">
+        <div class="avatar-outline"></div>
+        <div class="avatar"></div>
+      </div>
+      <div class="about-content">
+        <h2 data-animation="text-reveal">
+          <span class="line">About Me</span>
+        </h2>
+        <p data-animation="paragraph-reveal" data-animation-delay="0.2">
+          Part code-whisperer, part storyteller — I dance at the edge where artificial intelligence meets human desire. By day, I transform abstract algorithms into experiences that feel like magic; by night, I'm hunting for the perfect Tempranillo.
+        </p>
+        <p data-animation="paragraph-reveal" data-animation-delay="0.3">
+          I've spent a  about two decade building digital bridges between what machines can do and what humans actually want. Every project is an expedition — navigating the uncharted territory between cold technology and warm humanity.
+        </p>
+        <div class="skills" data-animation="stagger-fade" data-animation-delay="0.5">
+          <span class="skill-tag">AI Strategy</span>
+          <span class="skill-tag">Product Marketing</span>
+          <span class="skill-tag">UX Design</span>
+          <span class="skill-tag">Storytelling</span>
+          <span class="skill-tag">Creative Tech</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Animated Links -->
+  <footer id="contact" class="footer" data-scroll-section>
+    <div class="container">
+      <div class="social-links" data-animation="stagger-fade">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="social-link" data-animation-delay="0.1">
+          <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/miguelrodfher" target="_blank" rel="noopener" class="social-link" data-animation-delay="0.2">
+          <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="mailto:miguelrodfhercareer@gmail.com" class="social-link" data-animation-delay="0.3">
+          <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+          </svg>
+          <span>Email</span>
+        </a>
+      </div>
+      <p class="copyright" data-animation="fade-in" data-animation-delay="0.5">© 2025 Miguel Rodriguez</p>
+    </div>
+  </footer>
+
+  <!-- Cursor -->
+  <div class="custom-cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+  </div>
+
+  <!-- Loader -->
+  <div class="page-loader">
+    <div class="loader-content">
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./assets/scripts.js"></script>
+</body>
+</html>

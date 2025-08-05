@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="URL Content Analyzer - A case study by Miguel Rodriguez" />
+  <meta property="og:title" content="URL Content Analyzer Case Study - Miguel Rodriguez" />
+  <meta property="og:description" content="A lightweight frontend application for extracting and analyzing web page content" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-portfolio-url.com/projects/url-content-analyzer" />
+  <meta property="og:image" content="../../assets/og-preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="URL Content Analyzer Case Study - Miguel Rodriguez" />
+  <meta name="twitter:description" content="A lightweight frontend application for extracting and analyzing web page content" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- GSAP Animation Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Chart.js for Data Visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  
+  <!-- Custom Styles - Project specific -->
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" type="image/png" href="../../assets/favicon.png">
+
+  <title>URL Content Analyzer - Case Study | Miguel Rodriguez</title>
+</head>
+<body class="light-mode">
+  <!-- Navigation -->
+  <nav class="case-study-nav">
+    <div class="container">
+      <div class="nav-container">
+        <a href="../../index.html" class="nav-logo">MRodriguez</a>
+        <div class="nav-links">
+          <a href="../../index.html#projects" class="nav-link">Projects</a>
+          <a href="../../index.html#about" class="nav-link">About</a>
+          <a href="../../index.html#contact" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="case-study-hero">
+    <canvas id="particles-canvas" class="particles-canvas"></canvas>
+    <div class="container">
+      <h1 class="case-study-title" data-animation="text-reveal">
+        <span class="line">URL Content Analyzer</span>
+      </h1>
+      <p class="case-study-tagline" data-animation="fade-in" data-animation-delay="0.3">
+        <span class="typing-text">Frontend Dev & UX Designer</span> | A lightweight application for extracting web content
+      </p>
+      <div class="tech-tags" data-animation="fade-in" data-animation-delay="0.5">
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">HTML/CSS</span>
+        <span class="tech-tag">Chart.js</span>
+        <span class="tech-tag">Fetch API</span>
+      </div>
+    </div>
+    <div class="scroll-indicator" data-animation="fade-in" data-animation-delay="0.6">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <!-- Featured Image -->
+      <div class="mockup-container" data-animation="image-reveal" data-animation-delay="0.3">
+        <img src="./images/url_analyzer6.jpg" alt="URL Content Analyzer interface showing extracted data from a webpage" class="full-width-image">
+      </div>
+      
+      <!-- Metadata Grid -->
+      <div class="metadata-grid" data-animation="fade-in" data-animation-delay="0.5">
+        <div class="metadata-item">
+          <h3>Project Type</h3>
+          <p>Frontend Web Application</p>
+        </div>
+        <div class="metadata-item">
+          <h3>My Role</h3>
+          <p>Frontend Developer & UX Designer</p>
+        </div>
+        <div class="metadata-item">
+          <h3>Timeline</h3>
+          <p>4 Weeks (2023)</p>
+        </div>
+        <div class="metadata-item">
+          <h3>Technologies</h3>
+          <p>JavaScript, HTML5, CSS3, REST APIs</p>
+        </div>
+      </div>
+      
+      <!-- Project Overview -->
+      <h2 class="section-heading" data-animation="text-reveal">Project Overview</h2>
+      <div class="text-block" data-animation="paragraph-reveal" data-animation-delay="0.2">
+        <p>
+          The URL Content Analyzer is a browser-based tool that allows users to quickly analyze any webpage by simply entering its URL. The application extracts key elements including metadata, headings, links, images, and semantic structures, providing valuable insights for SEO analysis, content auditing, and competitive research.
+        </p>
+        <p>
+          As both the frontend developer and UX designer, I created this project to demonstrate efficient API consumption, responsive design principles, and a focus on delivering meaningful insights through intuitive visualization of web content structures.
+        </p>
+      </div>
+      
+      <div class="section-spacer"></div>
+      
+      <!-- Challenge Statement -->
+      <h2 class="section-heading" data-animation="text-reveal">The Challenge</h2>
+      <div class="text-block" data-animation="paragraph-reveal" data-animation-delay="0.2">
+        <p>
+          Creating an effective web content analyzer presented several key challenges:
+        </p>
+        <ul>
+          <li>Handling cross-origin resource sharing (CORS) limitations when accessing external website content</li>
+          <li>Efficiently parsing and categorizing large amounts of DOM elements from diverse website structures</li>
+          <li>Presenting complex technical information in an accessible, user-friendly interface</li>
+          <li>Ensuring fast performance even when processing content-heavy websites</li>
+          <li>Providing actionable insights rather than just raw extracted data</li>
+        </ul>
+      </div>
+      
+      <div class="section-spacer"></div>
+      
+      <!-- Solution Approach -->
+      <h2 class="section-heading" data-animation="text-reveal">The Solution</h2>
+      
+      <div class="tech-stack-container" data-animation="fade-in" data-animation-delay="0.3">
+        <div class="tech-stack">
+          <div class="tech-item">
+            <div class="tech-icon js-icon"></div>
+            <p>JavaScript</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon html-icon"></div>
+            <p>HTML5</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon css-icon"></div>
+            <p>CSS3</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon api-icon"></div>
+            <p>RESTful APIs</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon ui-icon"></div>
+            <p>UI Design</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-block" data-animation="paragraph-reveal" data-animation-delay="0.2">
+        <p>
+          I approached this challenge by implementing a comprehensive solution:
+        </p>
+      </div>
+      
+      <div class="process-stages">
+        <div class="stage">
+          <div class="stage-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0050E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3>Proxy-Based Architecture</h3>
+          <p>Implemented a server-side proxy to bypass CORS limitations, enabling analysis of any public URL</p>
+        </div>
+        <div class="stage">
+          <div class="stage-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0050E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+              <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+            </svg>
+          </div>
+          <h3>Smart Content Parsing</h3>
+          <p>Created intelligent algorithms to identify and categorize page elements based on semantic importance</p>
+        </div>
+        <div class="stage">
+          <div class="stage-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0050E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 18a5 5 0 0 1-10 0"></path>
+              <line x1="12" y1="2" x2="12" y2="9"></line>
+              <line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line>
+              <line x1="19.78" y1="10.22" x2="18.36" y2="11.64"></line>
+              <line x1="2" y1="18" x2="22" y2="18"></line>
+            </svg>
+          </div>
+          <h3>Visual Insights Dashboard</h3>
+          <p>Designed an intuitive interface featuring expandable sections, data visualizations, and exportable reports</p>
+        </div>
+        <div class="stage">
+          <div class="stage-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0050E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 16v-4"></path>
+              <path d="M12 8h.01"></path>
+            </svg>
+          </div>
+          <h3>Progressive Loading</h3>
+          <p>Implemented asynchronous loading with clear feedback to maintain responsiveness during content analysis</p>
+        </div>
+      </div>
+      
+      <!-- Technical Details -->
+      <h2 class="section-heading" data-animation="text-reveal">Technical Implementation</h2>
+      <div class="text-block" data-animation="paragraph-reveal" data-animation-delay="0.2">
+        <p>
+          The application's architecture focused on clean separation of concerns:
+        </p>
+      </div>
+      
+      <div class="code-features-container">
+        <div class="code-feature" data-animation="fade-in" data-animation-delay="0.3">
+          <h3>fetchPageContent<span class="function-params">(url)</span></h3>
+          <div class="code-snippet">
+            <pre><code>// URL validation and fetching mechanism
+async function fetchPageContent(url) {
+  try {
+    const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`);
+    const data = await response.json();
+    return { success: true, content: data.contents };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+}</code></pre>
+          </div>
+        </div>
+        
+        <div class="code-feature" data-animation="fade-in" data-animation-delay="0.4">
+          <h3>parseHTMLContent<span class="function-params">(htmlContent)</span></h3>
+          <div class="code-snippet">
+            <pre><code>// Processing HTML content into structured data
+function parseHTMLContent(htmlContent) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(htmlContent, 'text/html');
+  
+  return {
+    title: extractTitle(doc),
+    meta: extractMetaTags(doc),
+    headings: extractHeadings(doc),
+    links: extractLinks(doc),
+    images: extractImages(doc),
+    wordCount: countWords(doc)
+  };
+}</code></pre>
+          </div>
+        </div>
+        
+        <div class="code-feature" data-animation="fade-in" data-animation-delay="0.5">
+          <h3>createContentDistributionChart<span class="function-params">(data, containerId)</span></h3>
+          <div class="code-snippet">
+            <pre><code>// Dynamic chart creation for content insights
+function createContentDistributionChart(data, containerId) {
+  const ctx = document.getElementById(containerId).getContext('2d');
+  
+  return new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: Object.keys(data),
+      datasets: [{
+        data: Object.values(data),
+        backgroundColor: CHART_COLORS
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false }
+  });
+}</code></pre>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Application Demo -->
+      <h2 class="section-heading" data-animation="text-reveal">The Application</h2>
+      
+      <div class="mockup-container workflow" data-animation="image-reveal" data-animation-delay="0.3">
+        <img src="./images/url_analyzer3.jpg" alt="URL Content Analyzer workflow showing URL input, processing, and results visualization" class="full-width-image">
+      </div>
+      
+      <div class="text-block" data-animation="paragraph-reveal" data-animation-delay="0.2">
+        <p>
+          The final application provides an intuitive workflow:
+        </p>
+      </div>
+      
+      <div class="workflow-steps" data-animation="fade-in" data-animation-delay="0.3">
+        <div class="workflow-step">
+          <div class="step-number">1</div>
+          <div class="step-title">URL Input</div>
+          <p>Enter any public web address</p>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">2</div>
+          <div class="step-title">Processing</div>
+          <p>Extraction with visual feedback</p>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">3</div>
+          <div class="step-title">Results</div>
+          <p>Interactive content panels</p>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">4</div>
+          <div class="step-title">Insights</div>
+          <p>Pattern detection & issues</p>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">5</div>
+          <div class="step-title">Export</div>
+          <p>JSON or CSV formats</p>
+        </div>
+      </div>
+      
+      <div class="tooltip" data-animation="fade-in" data-animation-delay="0.6">
+        Users can download complete results in various formats for integration with other tools and further analysis.
+      </div>
+      
+      <!-- Feature Details -->
+      <div class="feature-blocks">
+        <div class="feature-block" data-animation="fade-in" data-animation-delay="0.3">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0050E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+          <h3>SEO Analysis</h3>
+          <p>Automatically checks meta tags, heading structure, image alt text, and keyword density to identify SEO strengths and opportunities</p>
+        </div>
+        
+        <div class="feature-block" data-animation="fade-in" data-animation-delay="0.4">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0050E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+              <line x1="4" y1="22" x2="4" y2="15"></line>
+            </svg>
+          </div>
+          <h3>Content Mapping</h3>
+          <p>Visualizes content structure showing the relationship between different page sections and their relative importance</p>
+        </div>
+        
+        <div class="feature-block" data-animation="fade-in" data-animation-delay="0.5">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0050E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <h3>Performance Metrics</h3>
+          <p>Calculates resource usage statistics including image sizes, script counts, and potential performance bottlenecks</p>
+        </div>
+      </div>
+      
+      <!-- Results Section -->
+      <h2 class="section-heading" data-animation="text-reveal">Results & Learnings</h2>
+      <div class="text-block" data-animation="paragraph-reveal" data-animation-delay="0.2">
+        <p>
+          This project delivered several valuable outcomes and insights:
+        </p>
+      </div>
+      
+      <div class="stats-container">
+        <div class="stat-box" data-animation="fade-in" data-animation-delay="0.3">
+          <svg class="progress-circle" width="120" height="120" viewBox="0 0 120 120">
+            <circle class="progress-circle-bg" cx="60" cy="60" r="54" stroke-width="4"></circle>
+            <circle class="progress-circle-bar" cx="60" cy="60" r="54" stroke-width="4" stroke-dasharray="339.292" stroke-dashoffset="339.292"></circle>
+          </svg>
+          <h3><span class="stat-value" data-value="98" data-suffix="%">0%</span></h3>
+          <p>Accuracy in content structure analysis compared to manual auditing</p>
+        </div>
+        <div class="stat-box" data-animation="fade-in" data-animation-delay="0.4">
+          <svg class="progress-circle" width="120" height="120" viewBox="0 0 120 120">
+            <circle class="progress-circle-bg" cx="60" cy="60" r="54" stroke-width="4"></circle>
+            <circle class="progress-circle-bar" cx="60" cy="60" r="54" stroke-width="4" stroke-dasharray="339.292" stroke-dashoffset="339.292"></circle>
+          </svg>
+          <h3><span class="stat-value" data-value="3.2" data-suffix="s">0s</span></h3>
+          <p>Average processing time for standard web pages with 50+ content elements</p>
+        </div>
+        <div class="stat-box" data-animation="fade-in" data-animation-delay="0.5">
+          <svg class="progress-circle" width="120" height="120" viewBox="0 0 120 120">
+            <circle class="progress-circle-bg" cx="60" cy="60" r="54" stroke-width="4"></circle>
+            <circle class="progress-circle-bar" cx="60" cy="60" r="54" stroke-width="4" stroke-dasharray="339.292" stroke-dashoffset="339.292"></circle>
+          </svg>
+          <h3><span class="stat-value" data-value="92" data-suffix="%">0%</span></h3>
+          <p>User satisfaction rating during beta testing with marketing professionals</p>
+        </div>
+      </div>
+      
+      <!-- Dashboard View -->
+      <div class="mockup-container" data-animation="image-reveal" data-animation-delay="0.3">
+        <img src="./images/url_analyzer1.jpg" alt="URL Content Analyzer dashboard showing content breakdown and analytics" class="full-width-image">
+      </div>
+      
+      <!-- Key Learnings -->
+      <h2 class="section-heading" data-animation="text-reveal">Key Insights</h2>
+      <div class="text-block" data-animation="paragraph-reveal" data-animation-delay="0.2">
+        <p>
+          This project yielded valuable insights about frontend development and content analysis:
+        </p>
+        <ul>
+          <li><strong>API limitations drive innovation:</strong> Working with CORS constraints led to developing more efficient proxy solutions and caching mechanisms</li>
+          <li><strong>Progressive feedback is essential:</strong> Users needed clear status updates during longer processing tasks to maintain engagement</li>
+          <li><strong>Insights over data:</strong> Raw extracted data proved far less valuable than processed insights with clear recommendations</li>
+          <li><strong>Performance optimization matters:</strong> Initial implementations slowed significantly with larger sites, requiring careful optimization of DOM traversal</li>
+        </ul>
+      </div>
+      
+      <div class="section-spacer"></div>
+      
+      <!-- Conclusion -->
+      <h2 class="section-heading" data-animation="text-reveal">Conclusion</h2>
+      <div class="text-block" data-animation="paragraph-reveal" data-animation-delay="0.2">
+        <p>
+          The URL Content Analyzer demonstrates how a focused frontend application can deliver significant value through thoughtful UX design and efficient data processing. Despite being a relatively simple concept, the careful implementation of performance optimizations, intuitive visualizations, and actionable insights transformed it from a basic utility into a genuinely useful tool for content strategists and digital marketers.
+        </p>
+        <p>
+          This project showcases my approach to frontend development: creating applications that not only work well technically but also provide meaningful, accessible insights to users through clean design and thoughtful information architecture.
+        </p>
+      </div>
+      
+      <!-- CTA -->
+      <a href="../../index.html#projects" class="return-link" data-animation="fade-in" data-animation-delay="0.3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to Projects
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer light">
+    <div class="container">
+      <p class="copyright" data-animation="fade-in" data-animation-delay="0.5">© 2025 Miguel Rodriguez</p>
+    </div>
+  </footer>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="./scripts.js"></script>
+</body>
+</html>

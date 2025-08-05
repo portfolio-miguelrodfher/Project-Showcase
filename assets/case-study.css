@@ -1,0 +1,144 @@
+/* Case Study Page Styles */
+
+/* General case study layout */
+.case-study-hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 0 4rem;
+  position: relative;
+}
+
+.case-study-title {
+  font-family: var(--font-headline);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.case-study-tagline {
+  font-family: var(--font-body);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 400;
+  max-width: 650px;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+
+/* Layout containers */
+.full-width-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.grid-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.text-block {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.text-block p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.text-block ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.text-block li {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+/* Mockups and images */
+.mockup-container {
+  margin: 2rem 0 4rem;
+  transition: transform 0.5s ease;
+}
+
+.mockup-container:hover {
+  transform: translateY(-5px);
+}
+
+.mockup-container.full-width {
+  max-width: 100%;
+}
+
+/* Results section */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+/* Light theme specific styles */
+.light-mode .case-study-title {
+  color: var(--text-dark);
+}
+
+.light-mode .case-study-nav {
+  color: var(--text-dark);
+}
+
+.light-mode .footer {
+  background-color: var(--bg-light-alt);
+  color: var(--text-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .case-study-hero {
+    padding: 6rem 0 2rem;
+    min-height: 40vh;
+  }
+  
+  .metadata-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation classes for GSAP */
+[data-animation="text-reveal"] {
+  opacity: 0;
+}
+
+[data-animation="fade-in"] {
+  opacity: 0;
+}
+
+[data-animation="image-reveal"] {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+[data-animation="paragraph-reveal"] {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+[data-animation="stagger-fade"] > * {
+  opacity: 0;
+}
