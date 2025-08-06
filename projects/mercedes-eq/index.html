@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mercedes-Benz EQ Electric Strategy - Premium Automotive Vision">
+  <title>Mercedes-Benz EQ Strategy | Premium Electric Vision</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js for visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Mercedes-Style Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Oswald:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="../../index.html" class="nav-logo">MRodriguez</a>
+      </div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../../index.html#projects" class="nav-link">Projects</a>
+          <a href="../../index.html#about" class="nav-link">About</a>
+          <a href="../../index.html#contact" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <!-- Using image instead of video for more reliable loading -->
+    <img class="hero-bg-image" src="./images/mbusa_24.webp" alt="Mercedes-Benz EQ electric vehicle">
+    <div class="hero-content">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="hero-badge">EQ · Electric Intelligence</div>
+          <h1>The road to electric luxury awaits you.</h1>
+          <p class="hero-tagline">Projected strategic transformation for Mercedes-Benz USA's electrified future</p>
+          <div class="hero-cta-container">
+            <a href="#strategy" class="hero-cta primary-cta">Explore Strategy</a>
+            <a href="#vehicle-section" class="hero-cta secondary-cta">View EQ Models</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview Section -->
+  <section class="project-overview-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Project Overview</h2>
+        <p class="section-description">Mercedes-Benz USA's Electric Transformation Strategy</p>
+      </div>
+
+      <div class="project-info-grid" data-aos="fade-up">
+        <div class="project-info-item">
+          <div class="project-info-label">Client</div>
+          <div class="project-info-value">Mercedes-Benz USA</div>
+        </div>
+        <div class="project-info-item">
+          <div class="project-info-label">My Role</div>
+          <div class="project-info-value">Strategic Project Manager</div>
+        </div>
+        <div class="project-info-item">
+          <div class="project-info-label">Timeline</div>
+          <div class="project-info-value">3 Months (2025)</div>
+        </div>
+        <div class="project-info-item">
+          <div class="project-info-label">Focus Areas</div>
+          <div class="project-info-value">Electrification Strategy, Sustainability, Innovation</div>
+        </div>
+      </div>
+
+      <div class="project-description" data-aos="fade-up">
+        <p>Mercedes-Benz USA is at a defining crossroads—where legacy meets future mobility. In this project, I authored a strategic blueprint designed to propel MBUSA into a leadership position in electrification, customer experience, and sustainable luxury. My work focused on aligning brand legacy with innovation-forward strategies, resulting in a comprehensive action plan now reflected across regional and national initiatives.</p>
+      </div>
+
+      <div class="section-header secondary" data-aos="fade-up">
+        <h3>Strategic Challenges</h3>
+      </div>
+
+      <div class="strategy-grid" data-aos="fade-up">
+        <div class="strategy-card">
+          <h4>Industry Acceleration</h4>
+          <p>The industry-wide EV transition is accelerating at unprecedented rates</p>
+        </div>
+        <div class="strategy-card">
+          <h4>Operational Complexity</h4>
+          <p>Legacy OEMs face complex challenges in adapting to new technologies</p>
+        </div>
+        <div class="strategy-card">
+          <h4>Strategic Vision</h4>
+          <p>MBUSA needed a unified framework for electrification, experience, and sustainability</p>
+        </div>
+        <div class="strategy-card">
+          <h4>Heritage Balance</h4>
+          <p>Balancing innovation with the storied heritage of a 135-year-old luxury brand</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integrated Strategy Framework -->
+  <section class="framework-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Integrated Strategy Framework</h2>
+        <p class="section-description">A comprehensive blueprint built on three interconnected pillars</p>
+      </div>
+
+      <div class="framework-pillars" data-aos="fade-up">
+        <div class="pillar-card">
+          <div class="pillar-header">Electrification Readiness</div>
+          <div class="pillar-content">
+            <ul>
+              <li>EV Infrastructure Acceleration: Comprehensive strategy for rapid deployment of charging networks and integration with Mercedes me Charge ecosystem</li>
+              <li>Dealership Enablement: Training programs and facility upgrades to prepare the dealer network for EV sales and service excellence</li>
+              <li>Customer Confidence: Educational initiatives and transparent communication strategies to address range anxiety and charging concerns</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-header">Sustainability Integration</div>
+          <div class="pillar-content">
+            <ul>
+              <li>Ambition 2039 Alignment: Strategic roadmap connecting local operations to Mercedes-Benz's global carbon neutrality goals</li>
+              <li>Emissions Reduction: Comprehensive roadmap for dealer operations with measurable milestones and efficiency improvements</li>
+              <li>Reporting Dashboards: Digital tools for tracking sustainability progress with clear metrics and actionable insights</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-header">Customer-Centric Innovation</div>
+          <div class="pillar-content">
+            <ul>
+              <li>AI-Powered Experiences: Next-generation digital experiences using artificial intelligence to personalize customer journeys</li>
+              <li>Digital Showroom Concepts: Revolutionary retail experiences merging physical and digital touchpoints for seamless customer engagement</li>
+              <li>Collaboration Frameworks: Cross-divisional systems to break down silos and accelerate innovation across all business units</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic Outcomes Section -->
+  <section class="outcomes-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Strategic Outcomes & Impact</h2>
+        <p class="section-description">Measurable results that demonstrate strategic effectiveness</p>
+      </div>
+
+      <div class="outcomes-grid" data-aos="fade-up">
+        <div class="outcome-card">
+          <div class="outcome-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h4>Unified Strategy</h4>
+          <p>NorthStar strategy adopted by key internal stakeholders across departments</p>
+        </div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+          </div>
+          <div class="outcome-number">30%</div>
+          <p>Increase in dealer EV-readiness within the pilot region</p>
+        </div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h4>Leadership Alignment</h4>
+          <p>Internal alignment achieved across all 4 regional business centers</p>
+        </div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          </div>
+          <h4>Strategic Reference</h4>
+          <p>Strategic deck adopted as executive reference playbook for ongoing initiatives</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic Messaging Section -->
+  <section id="strategy" class="strategy-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Strategic Transformation</h2>
+        <p class="section-description">A comprehensive approach to luxury electric mobility</p>
+      </div>
+      
+      <div class="strategy-grid">
+        <div class="strategy-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="strategy-icon">
+            <img src="./images/mbusa_15.webp" alt="Electric Technology" class="strategy-icon-image">
+          </div>
+          <h3>Legacy Meets Innovation</h3>
+          <p>Balancing 135 years of automotive excellence with cutting-edge electric technology</p>
+        </div>
+        
+        <div class="strategy-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="strategy-icon">
+            <img src="./images/mbusa_14.webp" alt="Dealer Network" class="strategy-icon-image">
+          </div>
+          <h3>Dealer Transformation</h3>
+          <p>Comprehensive strategy for transitioning traditional dealerships to electric mobility centers</p>
+        </div>
+        
+        <div class="strategy-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="strategy-icon">
+            <img src="./images/mbusa_16.webp" alt="EV Charging" class="strategy-icon-image">
+          </div>
+          <h3>EV-Forward Strategy</h3>
+          <p>Accelerating adoption through infrastructure development, education, and premium experiences</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vehicle Grid Section -->
+  <section id="vehicle-section" class="vehicle-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>The EQ Family</h2>
+        <p class="section-description">The proposed electric mobility future of Mercedes-Benz</p>
+      </div>
+      
+      <div class="vehicle-grid">
+        <div class="vehicle-card" data-aos="fade-up" data-aos-delay="100">
+          <a href="https://www.mbusa.com/en/vehicles/class/eqs/sedan" target="_blank" class="vehicle-link" rel="noopener noreferrer">
+            <div class="vehicle-image">
+              <img src="./images/mbusa_21.webp" alt="Mercedes-Benz EQS Sedan">
+            </div>
+            <h3>EQS Sedan</h3>
+            <p class="vehicle-description">Flagship luxury sedan with premium features</p>
+            <div class="vehicle-specs">
+              <div class="spec-item">
+                <span class="spec-label">Acceleration</span>
+                <span class="spec-value">5.9 sec</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Battery</span>
+                <span class="spec-value">118 kWh</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Range</span>
+                <span class="spec-value">390 mi</span>
+              </div>
+              <div class="specs-note">*Projected specifications</div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="vehicle-card" data-aos="fade-up" data-aos-delay="200">
+          <a href="https://www.mbusa.com/en/vehicles/class/eqe/sedan" target="_blank" class="vehicle-link" rel="noopener noreferrer">
+            <div class="vehicle-image">
+              <img src="./images/mbusa_23.webp" alt="Mercedes-Benz EQE Sedan">
+            </div>
+            <h3>EQE Sedan</h3>
+            <p class="vehicle-description">Executive electric sedan with advanced technology</p>
+            <div class="vehicle-specs">
+              <div class="spec-item">
+                <span class="spec-label">Acceleration</span>
+                <span class="spec-value">5.8 sec</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Battery</span>
+                <span class="spec-value">96 kWh</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Range</span>
+                <span class="spec-value">308 mi</span>
+              </div>
+              <div class="specs-note">*Projected specifications</div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="vehicle-card" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://www.mbusa.com/en/vehicles/class/eqb/suv" target="_blank" class="vehicle-link" rel="noopener noreferrer">
+            <div class="vehicle-image">
+              <img src="./images/mbusa_22.webp" alt="Mercedes-Benz EQB SUV">
+            </div>
+            <h3>EQB SUV</h3>
+            <p class="vehicle-description">Versatile compact SUV with optional third row</p>
+            <div class="vehicle-specs">
+              <div class="spec-item">
+                <span class="spec-label">Acceleration</span>
+                <span class="spec-value">8.5 sec</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Battery</span>
+                <span class="spec-value">70.5 kWh</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Range</span>
+                <span class="spec-value">250 mi</span>
+              </div>
+              <div class="specs-note">*Projected specifications</div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="vehicle-card" data-aos="fade-up" data-aos-delay="400">
+          <a href="https://www.mbusa.com/en/vehicles/class/eqe/suv" target="_blank" class="vehicle-link" rel="noopener noreferrer">
+            <div class="vehicle-image">
+              <img src="./images/mbusa_19.webp" alt="Mercedes-Benz EQE SUV">
+            </div>
+            <h3>EQE SUV</h3>
+            <p class="vehicle-description">Athletic midsize electric SUV with premium features</p>
+            <div class="vehicle-specs">
+              <div class="spec-item">
+                <span class="spec-label">Acceleration</span>
+                <span class="spec-value">5.9 sec</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Battery</span>
+                <span class="spec-value">96.0 kWh</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Range</span>
+                <span class="spec-value">270 mi</span>
+              </div>
+              <div class="specs-note">*Projected specifications</div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="vehicle-card" data-aos="fade-up" data-aos-delay="500">
+          <a href="https://www.mbusa.com/en/vehicles/class/eqs/suv" target="_blank" class="vehicle-link" rel="noopener noreferrer">
+            <div class="vehicle-image">
+              <img src="./images/mbusa_20.webp" alt="Mercedes-Benz EQS SUV">
+            </div>
+            <h3>EQS SUV</h3>
+            <p class="vehicle-description">Luxurious electric SUV with three-row seating</p>
+            <div class="vehicle-specs">
+              <div class="spec-item">
+                <span class="spec-label">Acceleration</span>
+                <span class="spec-value">4.6 sec</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Battery</span>
+                <span class="spec-value">118 kWh</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Range</span>
+                <span class="spec-value">317 mi</span>
+              </div>
+              <div class="specs-note">*Projected specifications</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regional Progress Metrics -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Projected Regional Impact</h2>
+        <p class="section-description">Anticipated advancement in key strategic areas</p>
+      </div>
+      
+      <div class="metrics-grid">
+        <div class="metrics-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="metrics-icon">
+            <img src="./images/mbusa_1.png" alt="Mercedes-Benz logo" class="metrics-logo">
+          </div>
+          <h3>Projected EV Readiness by Region</h3>
+          <div class="chart-container">
+            <canvas id="evReadinessChart"></canvas>
+          </div>
+        </div>
+        
+        <div class="metrics-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="metrics-icon">
+            <img src="./images/mbusa_1.png" alt="Mercedes-Benz logo" class="metrics-logo">
+          </div>
+          <h3>Forecasted Sustainability KPIs</h3>
+          <div class="chart-container">
+            <canvas id="sustainabilityChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap / Vision Section -->
+  <section class="roadmap-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Our Electric Vision</h2>
+        <p class="section-description">Proposed milestones on our path to full electrification</p>
+      </div>
+      
+      <div class="timeline" data-aos="fade-up">
+        <div class="timeline-item">
+          <div class="timeline-marker">2025</div>
+          <div class="timeline-content">
+            <div class="timeline-image">
+              <img src="./images/mbusa_10.webp" alt="EQ Portfolio" class="timeline-img">
+            </div>
+            <h3>Electric Portfolio Expansion</h3>
+            <p>Projected full EQ lineup available across all segments</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">2026</div>
+          <div class="timeline-content">
+            <div class="timeline-image">
+              <img src="./images/mbusa_11.webp" alt="Charging Infrastructure" class="timeline-img">
+            </div>
+            <h3>Infrastructure Complete</h3>
+            <p>Expected nationwide charging network fully operational</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">2027</div>
+          <div class="timeline-content">
+            <div class="timeline-image">
+              <img src="./images/mbusa_12.webp" alt="Dealer Network" class="timeline-img">
+            </div>
+            <h3>Dealer Transformation</h3>
+            <p>Anticipated 100% of dealers EV-certified and transformed</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">2030</div>
+          <div class="timeline-content">
+            <div class="timeline-image">
+              <img src="./images/mbusa_6.jpg" alt="Electric Leadership" class="timeline-img">
+            </div>
+            <h3>Electric Leadership</h3>
+            <p>Forecasted carbon-neutral operations and market leadership</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology & Customer Experience -->
+  <section class="tech-experience-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Technology & Customer Experience</h2>
+        <p class="section-description">Cutting-edge technology and immersive customer experiences that redefine electric mobility</p>
+      </div>
+
+      <div class="tech-grid" data-aos="fade-up">
+        <div class="tech-card">
+          <div class="tech-icon">
+            <img src="./images/mbusa_16.webp" alt="Connected Services" class="tech-icon-image">
+          </div>
+          <h3>Connected Services Ecosystem</h3>
+          <p>Seamless integration of vehicle systems with the Mercedes me app and cloud services</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">
+            <img src="./images/mbusa_14.webp" alt="Range Management" class="tech-icon-image">
+          </div>
+          <h3>Intuitive Range Management</h3>
+          <p>Advanced systems for optimizing electric range and route planning</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">
+            <img src="./images/mbusa_15.webp" alt="Digital Integration" class="tech-icon-image">
+          </div>
+          <h3>Seamless Digital Integration</h3>
+          <p>Full connectivity between vehicle, smartphone, and home systems</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-icon">
+            <img src="./images/mbusa_11.webp" alt="Retail Experience" class="tech-icon-image">
+          </div>
+          <h3>Reimagined Retail Experience</h3>
+          <p>Blending physical and digital touchpoints for a premium customer journey</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability Leadership -->
+  <section class="sustainability-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Sustainability Leadership</h2>
+        <p class="section-description">Initiatives that position Mercedes-Benz as a leader in responsible luxury mobility</p>
+      </div>
+
+      <div class="sustainability-grid" data-aos="fade-up">
+        <div class="sustainability-card">
+          <div class="sustainability-image">
+            <img src="./images/mbusa_12.webp" alt="Circular Economy">
+          </div>
+          <div class="sustainability-content">
+            <h3>Circular Economy Initiatives</h3>
+            <p>Comprehensive programs for materials recycling, parts remanufacturing, and sustainable supply chains</p>
+          </div>
+        </div>
+
+        <div class="sustainability-card">
+          <div class="sustainability-image">
+            <img src="./images/mbusa_6.jpg" alt="Ambition 2039">
+          </div>
+          <div class="sustainability-content">
+            <h3>Ambition 2039 Roadmap</h3>
+            <p>Strategic path toward carbon-neutral mobility across the entire vehicle lifecycle</p>
+          </div>
+        </div>
+
+        <div class="sustainability-card">
+          <div class="sustainability-image">
+            <img src="./images/mbusa_3.jpg" alt="Carbon-Neutral Operations">
+          </div>
+          <div class="sustainability-content">
+            <h3>Carbon-Neutral Operations</h3>
+            <p>Manufacturing and operational processes designed to minimize environmental impact</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Final Thoughts -->
+  <section class="vision-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Vision & Final Thoughts</h2>
+      </div>
+
+      <div class="vision-content" data-aos="fade-up">
+        <p>This project exemplifies the power of visionary thinking, cross-functional leadership, and premium execution in shaping the future of luxury mobility. From EV strategy to customer experience transformation, every initiative is rooted in driving measurable progress while honoring the Mercedes-Benz legacy.</p>
+        
+        <p>Working with Mercedes-Benz USA allowed me to leverage my strategic planning expertise while navigating the complexities of automotive industry transformation. The blueprint we created not only addresses immediate electrification needs but establishes a foundation for sustained innovation across the organization.</p>
+        
+        <p>Most importantly, this project reinforced my belief that effective strategy must balance aspiration with execution. By creating frameworks that were both visionary and practical, we ensured the roadmap would translate into meaningful action across all levels of the organization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content" data-aos="fade-up">
+        <h2>Ready to Transform Your Electric Strategy?</h2>
+        <p>Download the complete Mercedes-Benz EQ Strategy Executive Summary and explore how these frameworks can apply to your organization</p>
+        <a href="https://drive.google.com/file/d/1vIWToeKn-NXKRk-q2sYv8Q1sDqdcQwf-/view?usp=drive_link" class="cta-button" target="_blank">Download Executive Summary</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Animated Links -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Contact Form -->
+      <div class="footer-contact">
+        <h3>Contact Me</h3>
+        <form action="mailto:miguelrodfhercareer@gmail.com" method="POST" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+      <!-- Social Links -->
+      <div class="footer-socials">
+        <h3>Follow</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/wildinguavatown/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/miguelrodfher/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://drive.google.com/file/d/1L22V9WR8WKYCG6kzf2e18L1GTn4GuRDZ/view?usp=drive_link" target="_blank">Download Resume</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="footer-disclaimer">
+      <p>
+        <em>
+          Disclaimer: Some projects featured are representative recreations of real-world work completed for proprietary corporate clients. Due to confidentiality and intellectual property restrictions, full details and visuals cannot be disclosed. To maintain narrative and visual continuity, select images and design assets are AI-generated. Exceptions include the "Wine Discovery Experience" and "Château des Vallées de la Rose" branding, which are personal creative projects.
+        </em>
+      </p>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>© 2025 Miguel Rodriguez</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./scripts.js"></script>
+</body>
+</html>
